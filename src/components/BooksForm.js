@@ -15,9 +15,12 @@ function BooksForm() {
       <input type="text" name="title" />
       <select name="categories">
         {categories.map(cat => (
-          <option value={cat}>{cat}</option>
+          <option key={cat} value={cat}>
+            {cat}
+          </option>
         ))}
       </select>
+      <button type="submit">Add Book</button>
     </form>
   );
 }
