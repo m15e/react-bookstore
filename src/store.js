@@ -4,21 +4,23 @@ import booksReducer from "./reducers/books";
 // import rootReducer from "./reducers";
 
 const initialState = {
-  bookOne: {
-    id: 1,
-    title: "Thinking Fast and Slow",
-    category: "Action",
-  },
-  bookTwo: {
-    id: 2,
-    title: "Thinking Slow",
-    category: "Manga",
-  },
-  bookThree: {
-    id: 3,
-    title: "Slow",
-    category: "Action",
-  },
+  books: [
+    {
+      id: 1,
+      title: "Thinking Fast and Slow",
+      category: "Action",
+    },
+    {
+      id: 2,
+      title: "Thinking Slow",
+      category: "Manga",
+    },
+    {
+      id: 3,
+      title: "Slow",
+      category: "Action",
+    },
+  ],
 };
 
 const middleware = [thunk];
