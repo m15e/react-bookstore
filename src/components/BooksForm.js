@@ -24,7 +24,6 @@ const BooksForm = props => {
       ...state,
       [e.target.name]: e.target.value,
     });
-    console.log(state);
   };
 
   const handleSubmit = e => {

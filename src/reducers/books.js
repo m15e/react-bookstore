@@ -1,4 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../actions/types';
+import { CREATE_BOOK, REMOVE_BOOK } from "../actions/types";
 
 const booksReducer = (state, action) => {
   switch (action.type) {
@@ -10,12 +10,11 @@ const booksReducer = (state, action) => {
     case REMOVE_BOOK:
       return {
         ...state,
-        books: state.books.filter(book => action.payload !== book.id),
+        books: state.books.filter(book => book.id !== action.payload),
       };
     default:
       return state;
   }
-  return state
 };
 
 export default booksReducer;
