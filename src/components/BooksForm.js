@@ -16,7 +16,7 @@ const BooksForm = props => {
 
   const [state, setState] = useState({
     title: "",
-    category: "Action",
+    category: categories[0],
   });
 
   const onChange = e => {
@@ -24,6 +24,7 @@ const BooksForm = props => {
       ...state,
       [e.target.name]: e.target.value,
     });
+    console.log(state);
   };
 
   const handleSubmit = e => {
@@ -39,7 +40,7 @@ const BooksForm = props => {
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" name="title" onChange={onChange} />
-      <select name="categories" onChange={onChange}>
+      <select name="category" onChange={onChange}>
         {categories.map(cat => (
           <option key={cat} value={cat}>
             {cat}
