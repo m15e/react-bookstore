@@ -6,17 +6,17 @@ import booksReducer from './reducers/books';
 const initialState = {
   books: [
     {
-      id: 1,
+      id: Math.floor(Math.random() * 1000),
       title: 'Thinking Fast and Slow',
       category: 'Learning',
     },
     {
-      id: 2,
+      id: Math.floor(Math.random() * 1000),
       title: 'A land before time',
       category: 'Action',
     },
     {
-      id: 3,
+      id: Math.floor(Math.random() * 1000),
       title: 'Sapiens',
       category: 'History',
     },
@@ -26,11 +26,12 @@ const initialState = {
 const middleware = [thunk];
 
 const store = createStore(
-  // rootReducer,
+  // rootReducer, - uncomment if project eventually requires multiple reducers
   booksReducer,
   initialState,
   compose(
     applyMiddleware(...middleware),
+    /* eslint-disable no-underscore-dangle  */
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   ),
 );
