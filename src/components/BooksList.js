@@ -1,14 +1,14 @@
-import React from "react";
-import { connect } from "react-redux";
-import Book from "./Book";
-import { removeBook } from "../actions";
+import React from 'react';
+import { connect } from 'react-redux';
+import Book from './Book';
+import { removeBook } from '../actions';
 
-const BooksList = props => {
+const BooksList = state => {
   const handleRemoveBook = id => {
-    props.removeBook(id);
+    state.removeBook(id);
   };
 
-  const books = props.books.map(book => (
+  const books = state.books.map(book => (
     <Book
       key={book.id}
       id={book.id}

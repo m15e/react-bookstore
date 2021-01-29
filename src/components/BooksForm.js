@@ -1,21 +1,21 @@
-import React from "react";
-import { useState } from "react";
-import { connect } from "react-redux";
-import { createBook } from "../actions";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createBook } from '../actions';
 
 const BooksForm = props => {
   const categories = [
-    "Action",
-    "Biography",
-    "History",
-    "Horror",
-    "Kids",
-    "Learning",
-    "Sci-Fi",
+    'Action',
+    'Biography',
+    'History',
+    'Horror',
+    'Kids',
+    'Learning',
+    'Sci-Fi',
   ];
 
   const [state, setState] = useState({
-    title: "",
+    title: '',
     category: categories[0],
   });
 
@@ -49,6 +49,10 @@ const BooksForm = props => {
       <button type="submit">Add Book</button>
     </form>
   );
+};
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({

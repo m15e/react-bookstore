@@ -1,4 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from "./types";
+import { CREATE_BOOK, REMOVE_BOOK } from './types';
 
 export const createBook = book => ({
   type: CREATE_BOOK,
