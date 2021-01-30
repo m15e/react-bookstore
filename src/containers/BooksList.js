@@ -1,7 +1,8 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import Book from '../components/Book';
-import { removeBook } from '../actions';
+import React from "react";
+import { connect } from "react-redux";
+import Book from "../components/Book";
+import { removeBook } from "../actions";
+import CategoryFilter from "../components/CategoryFilter";
 
 const BooksList = state => {
   const handleRemoveBook = id => {
@@ -18,17 +19,20 @@ const BooksList = state => {
     />
   ));
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>id</th>
-          <th>title</th>
-          <th>category</th>
-          <th>action</th>
-        </tr>
-      </thead>
-      <tbody>{books}</tbody>
-    </table>
+    <>
+      <table>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>category</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>{books}</tbody>
+      </table>
+      <CategoryFilter />
+    </>
   );
 };
 
