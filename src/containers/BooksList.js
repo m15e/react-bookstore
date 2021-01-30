@@ -17,6 +17,7 @@ const BooksList = state => {
       handleRemoveBook={handleRemoveBook}
     />
   ));
+  
   return (
     <table>
       <thead>
