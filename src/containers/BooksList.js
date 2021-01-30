@@ -1,14 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Book from './Book';
+import Book from '../components/Book';
 
 const BooksList = state => {
   const books = state.books.map(book => (
     <Book
       key={book.id}
-      id={book.id}
-      title={book.title}
-      category={book.category}
+      /* eslint-disable react/jsx-props-no-spreading  */
+      {...book}
     />
   ));
   return (
