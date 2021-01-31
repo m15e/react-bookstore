@@ -1,4 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../actions/types';
+import { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER } from "../actions/types";
 
 const booksReducer = (state, action) => {
   switch (action.type) {
@@ -12,6 +12,17 @@ const booksReducer = (state, action) => {
         ...state,
         books: state.books.filter(book => book.id !== action.payload),
       };
+    case CHANGE_FILTER:
+      if (action.payload === "All") {
+        return {
+          ...state,
+        };
+      } else {
+        return {
+          books: state.books.filter(book => book.category === action.payload),
+          filter: action.payload,
+        };
+      }
     default:
       return state;
   }

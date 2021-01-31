@@ -28,3 +28,9 @@ ol,
 ul {
   list-style: none;
 }
+
+.filter {
+  display: block;
+  z-index: 9000;
+  cursor: pointer;
+}
