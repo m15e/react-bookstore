@@ -1,13 +1,14 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import categories from "../data/categories";
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import categories from '../data/categories';
 
 const CategoryFilter = props => {
   const { handleFilterChange, filter } = props;
 
   useEffect(() => {
-    const select = document.querySelector(".filter");
-    if (filter === "All") {
+    const select = document.querySelector('.filter');
+    if (filter === 'All') {
       select.selectedIndex = 0;
     } else {
       select.selectedIndex = categories.indexOf(filter) + 1;
@@ -33,5 +34,10 @@ const CategoryFilter = props => {
 const mapStateToProps = state => ({
   filter: state.filter,
 });
+
+CategoryFilter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  handleFilterChange: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps)(CategoryFilter);

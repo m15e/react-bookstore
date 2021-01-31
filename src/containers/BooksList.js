@@ -1,8 +1,8 @@
-import React from "react";
-import { connect } from "react-redux";
-import Book from "../components/Book";
-import { removeBook, changeFilter } from "../actions";
-import CategoryFilter from "../components/CategoryFilter";
+import React from 'react';
+import { connect } from 'react-redux';
+import Book from '../components/Book';
+import { removeBook, changeFilter } from '../actions';
+import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = state => {
   const handleRemoveBook = id => {
@@ -13,10 +13,9 @@ const BooksList = state => {
     state.changeFilter(filter);
   };
 
-  const filteredBooks =
-    state.filter === "All"
-      ? state.books
-      : state.books.filter(book => book.category === state.filter);
+  const filteredBooks = state.filter === 'All'
+    ? state.books
+    : state.books.filter(book => book.category === state.filter);
 
   const books = filteredBooks.map(book => (
     <Book
