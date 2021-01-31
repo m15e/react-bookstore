@@ -9,7 +9,7 @@ const BooksList = state => {
     state.removeBook(id);
   };
 
-  const handleFilter = filter => {
+  const handleFilterChange = filter => {
     state.changeFilter(filter);
   };
 
@@ -17,8 +17,6 @@ const BooksList = state => {
     state.filter === "All"
       ? state.books
       : state.books.filter(book => book.category === state.filter);
-
-  console.log(filteredBooks);
 
   const books = filteredBooks.map(book => (
     <Book
@@ -32,7 +30,7 @@ const BooksList = state => {
 
   return (
     <>
-      <CategoryFilter handleFilter={handleFilter} />
+      <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
         <thead>
           <tr>

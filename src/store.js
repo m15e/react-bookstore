@@ -1,6 +1,6 @@
 import { createStore } from "redux";
 import booksReducer from "./reducers/books";
-// import rootReducer from "./reducers";
+import rootReducer from "./reducers";
 
 const initialState = {
   books: [
@@ -23,10 +23,6 @@ const initialState = {
   filter: "All",
 };
 
-const store = createStore(
-  // rootReducer,
-  booksReducer,
-  initialState
-);
+const store = createStore(rootReducer, initialState);
 
 export default store;
