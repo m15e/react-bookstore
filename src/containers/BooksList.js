@@ -13,7 +13,14 @@ const BooksList = state => {
     state.changeFilter(filter);
   };
 
-  const books = state.books.map(book => (
+  const filteredBooks =
+    state.filter === "All"
+      ? state.books
+      : state.books.filter(book => book.category === state.filter);
+
+  console.log(filteredBooks);
+
+  const books = filteredBooks.map(book => (
     <Book
       key={book.id}
       id={book.id}
@@ -43,6 +50,7 @@ const BooksList = state => {
 
 const mapStateToProps = state => ({
   books: state.books,
+  filter: state.filter,
 });
 
 const mapDispatchToProps = dispatch => ({

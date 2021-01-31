@@ -8,6 +8,7 @@ const CategoryFilter = props => {
   useEffect(() => {
     const select = document.querySelector(".filter");
     if (filter === "All") {
+      console.log(filter);
       select.selectedIndex = 0;
     } else {
       select.selectedIndex = categories.indexOf(filter) + 1;

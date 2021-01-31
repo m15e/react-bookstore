@@ -13,16 +13,10 @@ const booksReducer = (state, action) => {
         books: state.books.filter(book => book.id !== action.payload),
       };
     case CHANGE_FILTER:
-      if (action.payload === "All") {
-        return {
-          ...state,
-        };
-      } else {
-        return {
-          books: state.books.filter(book => book.category === action.payload),
-          filter: action.payload,
-        };
-      }
+      return {
+        ...state,
+        filter: action.payload,
+      };
     default:
       return state;
   }
