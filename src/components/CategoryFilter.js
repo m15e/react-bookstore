@@ -23,7 +23,7 @@ const CategoryFilter = props => {
     >
       <option value="All">All</option>
       {categories.map(cat => (
-        <option key={Math.floor(Math.random() * 999)} value={cat}>
+        <option key={cat} value={cat}>
           {cat}
         </option>
       ))}
