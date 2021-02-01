@@ -1,11 +1,13 @@
 html {
   box-sizing: border-box;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 body,
 h1,
@@ -19,22 +21,26 @@ ol,
 ul {
   margin: 0;
   padding: 0;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 ol,
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 .filter {
   display: block;
   z-index: 9000;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .Bookstore-CMS {
   width: 1600px;
   height: 1434px;
   padding: 149px 60px 123px 100px;
-  background-color: #f5f6fa; }
+  background-color: #f5f6fa;
+}
 
 .content-container {
   width: 1400px;
@@ -43,7 +49,8 @@ ul {
   padding: 0 0 794px;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-  background-color: #fafafa; }
+  background-color: #fafafa;
+}
 
 .header {
   width: 1400px;
@@ -52,34 +59,45 @@ ul {
   padding: 23px 99px 27px 100px;
   background-color: #ffffff;
   font-family: "Montserrat", sans-serif;
-  display: flex; }
-  .header h1,
-  .header a {
+  display: flex;
+
+  h1,
+  a {
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
-    letter-spacing: normal; }
-  .header h1 {
+    letter-spacing: normal;
+  }
+
+  h1 {
     width: 240px;
     height: 37px;
     margin: 6px 47px 2px 0;
     font-size: 30px;
     font-weight: bold;
-    color: #0290ff; }
-  .header a {
+    color: #0290ff;
+  }
+
+  a {
     letter-spacing: 1.9px;
     text-transform: uppercase;
     text-decoration: none;
     height: 16px;
     font-size: 13px;
-    color: #121212; }
-  .header .books {
+    color: #121212;
+  }
+
+  .books {
     width: 59px;
-    margin: 18px 41px 11px 0; }
-  .header .categories {
+    margin: 18px 41px 11px 0;
+  }
+
+  .categories {
     width: 105px;
     margin: 18px 664px 11px 41px;
-    opacity: 0.5; }
+    opacity: 0.5;
+  }
+}
 
 .book {
   display: flex;
@@ -89,56 +107,76 @@ ul {
   padding: 32px 147px 26px 27px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
-  background-color: #ffffff; }
-  .book .is-half {
+  background-color: #ffffff;
+
+  .is-half {
     width: 500%;
-    display: flex; }
-  .book .info strong {
-    width: 49px;
-    height: 18px;
-    opacity: 0.5;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: bold; }
-  .book .info h3 {
-    height: 29px;
-    margin-top: 4px;
-    font-family: "Roboto Slab", serif;
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: -0.2px; }
-  .book .info a {
-    color: #4386bf;
-    font-family: "Roboto Slab", serif;
-    text-decoration: none;
-    font-size: 14px; }
-  .book .info ul {
     display: flex;
-    margin-top: 18px;
-    height: 24px; }
-    .book .info ul li:first-of-type {
-      padding-right: 15px; }
-    .book .info ul li:nth-of-type(2) {
-      padding-left: 17px;
-      padding-right: 17px;
-      border-left: 1px solid #e8e8e8;
-      border-right: 1px solid #e8e8e8; }
-    .book .info ul li:nth-of-type(3) {
-      padding-left: 17px; }
-  .book .pct-col {
-    display: flex; }
-    .book .pct-col .pct-complete {
+  }
+
+  .info {
+    strong {
+      width: 49px;
+      height: 18px;
+      opacity: 0.5;
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    h3 {
+      height: 29px;
+      margin-top: 4px;
+      font-family: "Roboto Slab", serif;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: -0.2px;
+    }
+    a {
+      color: #4386bf;
+      font-family: "Roboto Slab", serif;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    ul {
+      display: flex;
+      margin-top: 18px;
+      height: 24px;
+
+      li:first-of-type {
+        padding-right: 15px;
+      }
+
+      li:nth-of-type(2) {
+        padding-left: 17px;
+        padding-right: 17px;
+        border-left: 1px solid #e8e8e8;
+        border-right: 1px solid #e8e8e8;
+      }
+
+      li:nth-of-type(3) {
+        padding-left: 17px;
+      }
+    }
+  }
+
+  .pct-col {
+    display: flex;
+
+    .pct-complete {
       display: flex;
       flex-direction: column;
       font-family: "Montserrat", sans-serif;
       margin: 1px 92px 0 11px;
       font-size: 32px;
-      color: #121212; }
-      .book .pct-col .pct-complete span {
+      color: #121212;
+      span {
         font-size: 15px;
         opacity: 0.5;
-        height: 18px; }
-    .book .pct-col .circle {
+        height: 18px;
+      }
+    }
+
+    .circle {
       width: 68px;
       height: 68px;
       border-style: solid;
@@ -147,6 +185,7 @@ ul {
       border-radius: 50%;
       border-top-color: #e8e8e8;
       transform: rotate(316deg);
-      z-index: 2; }
-
-/*# sourceMappingURL=App.css.map */
+      z-index: 2;
+    }
+  }
+}
