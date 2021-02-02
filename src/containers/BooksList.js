@@ -32,7 +32,7 @@ const BooksList = ({
   return (
     <>
       <CategoryFilter handleFilterChange={handleFilterChange} />
-      <div className='books-container'>
+      <div className="books-container">
         {bookArr}
       </div>
     </>
