@@ -32,17 +32,9 @@ const BooksList = ({
   return (
     <>
       <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>title</th>
-            <th>category</th>
-            <th>action</th>
-          </tr>
-        </thead>
-        <tbody>{bookArr}</tbody>
-      </table>
+      <div className="books-container">
+        {bookArr}
+      </div>
     </>
   );
 };

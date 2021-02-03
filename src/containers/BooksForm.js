@@ -32,17 +32,21 @@ const BooksForm = props => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" className="book-title" name="title" onChange={onChange} />
-      <select name="category" onChange={onChange}>
-        {categories.map(cat => (
-          <option key={cat} value={cat}>
-            {cat}
-          </option>
-        ))}
-      </select>
-      <button type="submit">Add Book</button>
-    </form>
+    <div className="book-form">
+      <div className="line" />
+      <h3>Add new book</h3>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Book title" className="book-title" name="title" onChange={onChange} />
+        <select name="category" onChange={onChange}>
+          {categories.map(cat => (
+            <option key={cat} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
+        <button type="submit">Add Book</button>
+      </form>
+    </div>
   );
 };
 
